@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.environment.SystemEnvironmentVariables;
+import net.thucydides.core.util.EnvironmentVariables;
 import pages.RegistrationFormPage;
 
 public class RegistrationHelper {
@@ -13,8 +15,12 @@ public class RegistrationHelper {
 	
 	@Step
 	public void openDemoWebsite() {
+		EnvironmentVariables variables = SystemEnvironmentVariables.createEnvironmentVariables();
+	    String url2 = variables.getProperty("webdriver.base.url2");
+	    System.out.println(url2);
 		registrationFormPage.open();
 		registrationFormPage.getDriver().manage().window().maximize();
+		registrationFormPage.handleDropdown();
 	}
 	
 	@Step

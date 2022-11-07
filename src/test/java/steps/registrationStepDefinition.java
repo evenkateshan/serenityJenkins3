@@ -1,11 +1,12 @@
 package steps;
 
-import org.junit.Test;
 
 import helpers.RegistrationHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.environment.SystemEnvironmentVariables;
+import net.thucydides.core.util.EnvironmentVariables;
 
 
 public class registrationStepDefinition {

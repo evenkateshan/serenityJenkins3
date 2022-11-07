@@ -43,7 +43,7 @@ Feature: Validate Built-in Methods of serenity
     And user enters "demoemail@gmail.com" in email field in registration form
     And user enters 99 in verification section in registration form
     When user clicks on submit button in registration form
-    Then registration should be successful and "Registration Form is Successfully Submitteddhes8ry834e" message should be displayed
+    Then registration should be successful and "Registration Form is Successfully Submitted" message should be displayed
     
     
     
